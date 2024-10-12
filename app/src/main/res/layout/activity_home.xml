@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGreen"
+    tools:context=".HomeActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        >
+        <Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:title="@string/app_name"
+            android:titleTextColor="@color/white"
+            >
+        </Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <include
+        android:id="@+id/content"
+        layout="@layout/content_home"/>
+
+
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottom_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.BottomAppBar"
+       android:layout_gravity="bottom"
+        android:backgroundTint="@color/white"
+        app:fabCradleRoundedCornerRadius="15dp"
+        app:fabCradleVerticalOffset="16dp"
+        app:fabCradleMargin="8dp"
+        >
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            app:menu="@menu/bottom_navigation_menu"
+            app:itemIconTint="@color/bottom_nav_selector"
+            />
+
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_todo_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/blue"
+        android:tint="@color/white"
+        android:src="@drawable/ic_add"
+        app:layout_anchor="@id/bottom_appbar"
+        app:backgroundTint="@color/white"
+        />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

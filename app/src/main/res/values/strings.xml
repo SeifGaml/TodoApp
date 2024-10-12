@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">TodoApp</string>
+    <string name="title_required" />
+    <string name="Edit_Text"> Edit Text</string>
+    <string name="Edit">Edit</string>
+</resources>
